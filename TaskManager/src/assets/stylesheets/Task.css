@@ -1,0 +1,39 @@
+.component-task-container {
+  color: rgb(100, 100, 100);
+  margin-bottom: 16px;
+  padding: 8px 16px;
+  border: 1px rgb(210, 210, 210) solid;
+  border-radius: 5px;
+  background: white;
+  box-shadow: rgb(200, 200, 200) 2px 2px 2px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.component-task-container:hover {
+  box-shadow: rgb(150, 150, 150) 2px 2px 2px;
+  transition: 0.5s;
+}
+
+.component-task-container > p {
+  margin: 0px;
+}
+
+.delete-task-btn {
+  background: none;
+  height: 30px;
+  width: 30px;
+  border-radius: 25px;
+  padding: 5px auto;
+}
+
+.delete-task-btn:hover {
+  background: #fff5dd;
+  transform: translate(-0.5px, -0.5px);
+  box-shadow: rgb(200, 200, 200) 2px 2px 2px;
+}
+
+.delete-task-btn:focus {
+  outline: none;
+}

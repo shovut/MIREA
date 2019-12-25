@@ -1,0 +1,103 @@
+.component-app-container {
+  /*font-family: "Indie Flower", cursive;*/
+  padding: 32px 64px;
+}
+
+.component-app-container > h1 {
+  text-align: center;
+  background: rgb(220, 220, 220);
+  display: inline;
+  padding: 8px 32px 8px 256px;
+  position: relative;
+  left: -250px;
+  box-shadow: rgb(100, 100, 100) 2px 2px 5px;
+}
+
+.component-app-container-columns {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.add-task-input {
+  padding: 0px 16px;
+  margin: 24px auto;
+  border-radius: 4px;
+  border: 1px rgb(200, 200, 200) solid;
+  width: 150px;
+  transition: 1s;
+}
+
+.add-task-input:focus {
+  background: #fff5dd;
+  outline: none;
+}
+
+.add-task-btn {
+  padding: 0px 8px;
+  margin-left: 8px;
+  background: none;
+  border-radius: 15px;
+}
+
+.add-task-btn:focus {
+  outline: none;
+}
+
+.add-task-btn:hover {
+  background: #fff5dd;
+  transform: translate(-0.5px, -1px);
+}
+
+.add-column-container {
+  margin: 56px auto;
+  border: 1px rgba(150, 150, 150, 1) solid;
+  padding: 32px 24px;
+  width: 50%;
+  transition: 0.5s;
+}
+
+.add-column-container:hover {
+  box-shadow: rgb(200, 200, 200) 5px 5px 2px;
+}
+
+.add-column-container > h1 {
+  margin-bottom: 24px;
+  font-size: 32px;
+  text-align: center;
+}
+
+.add-column-form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.add-column-input {
+  padding: 0px 16px;
+  border-radius: 4px;
+  border: 1px rgb(200, 200, 200) solid;
+  width: 50%;
+  transition: 1s;
+}
+
+.add-column-input:focus {
+  background: #fff5dd;
+  outline: none;
+}
+
+.add-column-btn {
+  margin-top: 16px;
+  padding: 0px 8px;
+  background: none;
+  border-radius: 15px;
+  width: 25%;
+}
+
+.add-column-btn:focus {
+  outline: none;
+}
+
+.add-column-btn:hover {
+  background: #fff5dd;
+  transform: translate(-0.5px, -1px);
+}
