@@ -39,8 +39,8 @@ public class Main {
 
         System.out.println();
 
-        // Communication example
-        System.out.println("Communication example");
+        // Strategy example
+        System.out.println("Strategy example");
 
         Smartphone smartphoneLTE = new SmartphoneWithLTE();
         smartphoneLTE.communicationTest();
@@ -63,8 +63,8 @@ public class Main {
 
         System.out.println();
 
-        // Strategy example
-        System.out.println("Strategy example");
+        // Decorator example
+        System.out.println("Decorator example");
 
         Hero hero1 = new JumpHero();
         System.out.println(hero1.getInfo());
