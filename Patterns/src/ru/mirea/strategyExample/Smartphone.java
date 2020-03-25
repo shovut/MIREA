@@ -1,4 +1,4 @@
-package strategyExample;
+package ru.mirea.strategyExample;
 
 public abstract class Smartphone {
     private Communication communication;

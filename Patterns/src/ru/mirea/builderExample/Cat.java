@@ -1,4 +1,4 @@
-package builderExample;
+package ru.mirea.builderExample;
 
 public class Cat {
     private String name;

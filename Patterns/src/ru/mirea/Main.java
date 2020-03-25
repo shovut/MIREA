@@ -1,9 +1,9 @@
 package ru.mirea;
-import abstractFactoryExample.*;
-import builderExample.*;
-import decoratorExample.*;
-import facadeExample.*;
-import strategyExample.*;
+import ru.mirea.abstractFactoryExample.*;
+import ru.mirea.builderExample.*;
+import ru.mirea.decoratorExample.*;
+import ru.mirea.facadeExample.*;
+import ru.mirea.strategyExample.*;
 
 public class Main {
 

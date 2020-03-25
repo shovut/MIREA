@@ -1,4 +1,4 @@
-package decoratorExample;
+package ru.mirea.decoratorExample;
 
 public class Weapon extends Decorator{
     Hero hero;

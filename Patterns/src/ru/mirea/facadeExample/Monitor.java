@@ -1,4 +1,4 @@
-package facadeExample;
+package ru.mirea.facadeExample;
 
 public class Monitor {
     public void monitorActivate(){

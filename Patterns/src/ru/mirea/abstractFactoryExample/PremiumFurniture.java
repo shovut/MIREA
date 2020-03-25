@@ -1,4 +1,4 @@
-package abstractFactoryExample;
+package ru.mirea.abstractFactoryExample;
 
 public class PremiumFurniture extends Furniture{
     public PremiumFurniture(FurnitureFactory furnitureFactory) {

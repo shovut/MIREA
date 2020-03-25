@@ -1,4 +1,4 @@
-package decoratorExample;
+package ru.mirea.decoratorExample;
 
 public abstract class Hero {
     String name = "Unnamed Hero";

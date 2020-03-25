@@ -1,4 +1,4 @@
-package abstractFactoryExample;
+package ru.mirea.abstractFactoryExample;
 
 public class PremiumFurnitureFactory implements FurnitureFactory{
     @Override

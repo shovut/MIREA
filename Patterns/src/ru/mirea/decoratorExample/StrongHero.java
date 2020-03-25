@@ -1,4 +1,4 @@
-package decoratorExample;
+package ru.mirea.decoratorExample;
 
 public class StrongHero extends Hero{
     public StrongHero() {

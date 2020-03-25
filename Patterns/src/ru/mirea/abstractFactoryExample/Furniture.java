@@ -1,4 +1,4 @@
-package abstractFactoryExample;
+package ru.mirea.abstractFactoryExample;
 
 import java.util.ArrayList;
 import java.util.List;

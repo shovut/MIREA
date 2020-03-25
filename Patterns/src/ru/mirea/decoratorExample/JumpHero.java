@@ -1,4 +1,4 @@
-package decoratorExample;
+package ru.mirea.decoratorExample;
 
 public class JumpHero extends Hero{
     public JumpHero() {
