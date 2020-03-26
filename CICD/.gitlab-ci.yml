@@ -1,0 +1,45 @@
+stages:
+  - test
+  - build
+  - deploy
+
+# test:
+#     stage: test
+#     image: alpine:latest
+#     script:
+#       - echo ${CI_REGISTRY_USER}
+#       - echo ${CI_REGISTRY_PASSWORD}
+#       - echo ${CI_REGISTRY}
+#       - echo ${CI_PROJECT_PATH}
+
+build:
+    stage: build
+    services:
+      - name: docker:18.09.8-dind
+        alias: docker-dind
+    image: docker:latest
+    variables:
+        DOCKER_HOST: tcp://docker:2375
+    script:
+      - echo "building docker image"
+      - docker login -u ${CI_REGISTRY_USER} -p ${CI_REGISTRY_PASSWORD} ${CI_REGISTRY}
+      - docker build -t ${CI_REGISTRY}/${CI_PROJECT_PATH}:latest .
+      - docker images
+      - docker push ${CI_REGISTRY}/${CI_PROJECT_PATH}:latest
+ 
+deploy:
+    stage: deploy
+    image: dtzar/helm-kubectl:latest
+    script: 
+      - |
+        echo "Setting credentials"
+        kubectl config set-cluster stage --server "${CLUSTER_STAGING_URL}"
+        kubectl config set clusters.stage.certificate-authority-data "${CLUSTER_STAGING_CA}"
+        kubectl config set users.cicd.client-certificate-data "${CLUSTER_STAGING_CLIENT_CERT}"
+        kubectl config set users.cicd.client-key-data "${CLUSTER_STAGING_CLIENT_KEY}"
+        kubectl config set-context stage-cicd --cluster stage --user cicd
+        kubectl config use-context stage-cicd
+      - |
+        kubectl config set-context --current --namespace=imandron
+      - |
+        helm install test helm/

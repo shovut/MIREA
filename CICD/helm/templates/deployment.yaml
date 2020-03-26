@@ -1,0 +1,21 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: server-deployment
+spec:
+  replicas: {{ .Values.replicaCount }}
+  selector:
+    matchLabels:
+      app: server
+  template: 
+    metadata: 
+      labels:
+        app: server
+    spec:
+      containers:
+      - name: server
+        image: {{ .Values.image.repository }}
+        ports:
+          - containerPort: 8080
+      imagePullSecrets:
+      - name: gitlab

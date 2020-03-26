@@ -1,0 +1,5 @@
+replicaCount: 3
+image:
+  repository: registry.gitlab.safetex.ru/shovut/imandronstasproject
+innerPort: 8080
+outPort: 80

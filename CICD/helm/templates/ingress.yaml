@@ -1,0 +1,17 @@
+apiVersion: extensions/v1beta1
+kind: Ingress
+metadata:
+  name: server-ingress
+spec:
+  tls:
+    - secretName: example
+      hosts:
+        - app.kube.safetex.ru
+  rules:
+    - host: app.kube.safetex.ru
+      http:
+          paths:
+            - path: /mandron
+              backend:
+                serviceName: server-service
+                servicePort: 80
